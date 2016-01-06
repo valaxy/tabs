@@ -1,0 +1,22 @@
+{
+  "name": "tabs",
+  "version": "0.1.0",
+  "description": "TABS",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/valaxy/tabs.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/valaxy/tabs/issues"
+  },
+  "homepage": "https://github.com/valaxy/tabs#readme",
+  "dependencies": {
+    "jquery-ui": "^1.10.5"
+  }
+}
