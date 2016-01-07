@@ -2,6 +2,8 @@
 - Only one tab can be active
 - One tab always associated with a content area(but not must)
 
+Check `lib/tabs.js` for more info
+
 # DOM Manipulate
 - `new Tabs()` 
 - `root`
