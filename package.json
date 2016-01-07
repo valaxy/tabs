@@ -10,13 +10,18 @@
     "type": "git",
     "url": "git+https://github.com/valaxy/tabs.git"
   },
-  "author": "",
-  "license": "ISC",
+  "author": "valaxy",
+  "license": "MIT",
   "bugs": {
     "url": "https://github.com/valaxy/tabs/issues"
   },
   "homepage": "https://github.com/valaxy/tabs#readme",
   "dependencies": {
-    "jquery-ui": "^1.10.5"
+    "jquery-ui": "github:jquery/jquery-ui"
+  },
+  "devDependencies": {
+    "cjs": "github:valaxy/cjs",
+    "qunitjs": "^1.20.0",
+    "requirejs": "^2.1.22"
   }
 }
