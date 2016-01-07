@@ -9,14 +9,7 @@
     <script src="../node_modules/requirejs/require.js"></script>
     <script src="requirejs-config.js"></script>
     <script>
-        require(['cjs!lib/tabs'], function (Tabs) {
-            var tabs = new Tabs
-            tabs.add('<p>1</p>')
-            tabs.add('<p>2</p>')
-            tabs.add('<p>3</p>')
-
-            document.body.appendChild(tabs.root)
-        })
+        require(['cjs!test/manual'])
     </script>
 </body>
 </html>

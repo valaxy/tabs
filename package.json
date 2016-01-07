@@ -1,8 +1,8 @@
 {
   "name": "tabs",
-  "version": "0.1.0-dev",
-  "description": "TABS",
-  "main": "index.js",
+  "version": "0.1.0",
+  "description": "Tabs",
+  "main": "lib/tabs.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
@@ -16,12 +16,9 @@
     "url": "https://github.com/valaxy/tabs/issues"
   },
   "homepage": "https://github.com/valaxy/tabs#readme",
-  "dependencies": {
-    "jquery": "^2.1.4",
-    "jquery-ui": "github:jquery/jquery-ui"
-  },
   "devDependencies": {
     "cjs": "github:valaxy/cjs",
+    "jquery": "^2.1.4",
     "qunitjs": "^1.20.0",
     "requirejs": "^2.1.22"
   }
