@@ -27,6 +27,15 @@ QUnit.test('root/length/hasByID()/add()', function (assert) {
 	assert.equal(tabs.length, 3)
 })
 
+QUnit.test('add(): specify ID', function (assert) {
+	var tabs = new Tabs
+	var id = tabs.add('<p>123</p>', undefined, '123')
+	assert.equal(id, '123')
+
+	var tab = tabs.getByID(id)
+	assert.equal(tabs.getID(tab), '123')
+})
+
 
 QUnit.test('getAt()/getByID()/removeByID()', function (assert) {
 	var tabs = new Tabs
@@ -45,7 +54,7 @@ QUnit.test('getAt()/getByID()/removeByID()', function (assert) {
 })
 
 
-QUnit.test('activeId/active/activeByID()', function (assert) {
+QUnit.test('activeId/active/activateByID()', function (assert) {
 	var tabs = new Tabs
 	tabs.add('<p>1</p>')
 	tabs.add('<p>2</p>')
@@ -54,7 +63,15 @@ QUnit.test('activeId/active/activeByID()', function (assert) {
 	assert.equal(tabs.activeId, null)
 	assert.equal(tabs.active, null)
 
-	tabs.activeByID(2)
+	tabs.activateByID(2)
 	assert.equal(tabs.activeId, 2)
 	assert.equal(tabs.active.innerText, 2)
+})
+
+
+QUnit.test('getID()', function (assert) {
+	var tabs = new Tabs
+	var id = tabs.add('<p>1</p>')
+	var tab = tabs.getByID(id)
+	assert.equal(id, tabs.getID(tab))
 })

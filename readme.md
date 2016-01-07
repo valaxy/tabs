@@ -8,12 +8,13 @@
 - `length`
 - `activeId`
 - `active`
+- `getID(tab)`
 - `getAt(index)` 
 - `getByID(id)` 
 - `hasByID(id)`
-- `add(innerHTML, [index])`
+- `add(innerHTML, [index], [id])`
 - `removeByID(id)`
-- `activeByID(id)` 
+- `activateByID(id)` 
 
 # CSS Selector Example
 - `tabs` root element
