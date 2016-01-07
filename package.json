@@ -1,6 +1,6 @@
 {
   "name": "tabs",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "description": "Tabs",
   "main": "lib/tabs.js",
   "scripts": {
@@ -20,6 +20,8 @@
     "cjs": "github:valaxy/cjs",
     "jquery": "^2.1.4",
     "qunitjs": "^1.20.0",
+    "react": "^0.14.6",
+    "react-dom": "^0.14.6",
     "requirejs": "^2.1.22"
   }
 }

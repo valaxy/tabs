@@ -4,25 +4,27 @@ var Tabs = require('../lib/tabs')
 QUnit.module('Tabs')
 
 
-QUnit.test('root/length/add()', function (assert) {
-	var tab = new Tabs
+QUnit.test('root/length/hasByID()/add()', function (assert) {
+	var tabs = new Tabs
 
 	// empty
-	assert.equal(tab.root.tagName, 'TABS')
-	assert.equal(tab.length, 0)
+	assert.equal(tabs.root.tagName, 'TABS')
+	assert.equal(tabs.length, 0)
+	assert.ok(!tabs.hasByID(1))
 
 
 	// append
-	assert.equal(tab.add('<p>1</p>'), 1)
-	assert.equal(tab.length, 1)
+	assert.equal(tabs.add('<p>1</p>'), 1)
+	assert.equal(tabs.length, 1)
+	assert.ok(tabs.hasByID(1))
 
 	// append
-	assert.equal(tab.add('<p>2</p>'), 2)
-	assert.equal(tab.length, 2)
+	assert.equal(tabs.add('<p>2</p>'), 2)
+	assert.equal(tabs.length, 2)
 
 	// insert
-	assert.equal(tab.add('<p>3</p>', 0), 3)
-	assert.equal(tab.length, 3)
+	assert.equal(tabs.add('<p>3</p>', 0), 3)
+	assert.equal(tabs.length, 3)
 })
 
 

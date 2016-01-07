@@ -10,6 +10,7 @@
 - `active`
 - `getAt(index)` 
 - `getByID(id)` 
+- `hasByID(id)`
 - `add(innerHTML, [index])`
 - `removeByID(id)`
 - `activeByID(id)` 
