@@ -1,6 +1,6 @@
 {
   "name": "tabs",
-  "version": "0.1.0",
+  "version": "0.1.0-dev",
   "description": "TABS",
   "main": "index.js",
   "scripts": {
@@ -17,6 +17,7 @@
   },
   "homepage": "https://github.com/valaxy/tabs#readme",
   "dependencies": {
+    "jquery": "^2.1.4",
     "jquery-ui": "github:jquery/jquery-ui"
   },
   "devDependencies": {

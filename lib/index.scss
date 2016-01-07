@@ -1,0 +1,74 @@
+@charset "utf-8";
+$bg-color: white;
+$active-bg-color: #FF851B;
+$border-color: #777;
+$edge-angle: 20deg;
+
+tabs {
+	display: block;
+
+	tab {
+		cursor:        default;
+		position:      relative;
+		display:       inline-block;
+		text-align:    center;
+		width:         4em;
+		background:    $bg-color;
+		border-top:    1px solid $border-color;
+		border-bottom: 1px solid $border-color;
+		margin:        0 .5em;
+
+		&::before, &::after {
+			content:       '';
+			display:       block;
+			width:         1em;
+			position:      absolute;
+			top:           -1px;
+			height:        100%;
+			z-index:       -1;
+			background:    $bg-color;
+			border-top:    1px solid $border-color;
+			border-bottom: 1px solid $border-color;
+			box-sizing:    content-box;
+		}
+
+		&::before {
+			left:                   -.5em;
+			transform:              skewx(-$edge-angle) translateZ(0);
+			border-left:            1px solid $border-color;
+			border-top-left-radius: 3px;
+		}
+
+		&::after {
+			right:                   -.5em;
+			transform:               skewx($edge-angle) translateZ(0);
+			border-right:            1px solid $border-color;
+			border-top-right-radius: 3px;
+		}
+
+		&:nth-last-of-type(1) {
+			z-index: 1;
+		}
+
+		&:nth-last-of-type(2) {
+			z-index: 2;
+		}
+
+		&:nth-last-of-type(3) {
+			z-index: 3;
+		}
+	}
+
+	tab[data-active=true] {
+		background: $active-bg-color;
+		z-index:    999 !important;
+		color:      white;
+		//border-bottom: none;
+
+		&::before, &::after {
+			background: $active-bg-color;
+			//border-bottom: none;
+		}
+	}
+
+}
